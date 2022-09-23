@@ -12,7 +12,7 @@ Quando o contador do TIM3 está em 998, ocorre um evento Toggle on Match na saí
 
 Quando o contador do TIM3 está em 999 ocorre um Update Event. Nesse momento o trigger é disparado e uma conversão ADC via DMA é iniciada. Após isso o TIM3 reseta e começa a contagem novamente, indefinidamente. Assim, toda vez que ocorre um Update Event no TIM3, uma conversão ADC é realizada e seu resultado é colcoado em um buffer via DMA, de forma que o núcleo do STM32 fica livre para realizar outras operações.
 
-O Toggle on Match na porta PA6 é usado para observar via osciloscópio o extao momento em que cada conversão ADC é iniciada. (Na verdade o toggle on match ocorre um ciclo de corre antes do início da conversão ADC).
+O Toggle on Match na porta PA6 é usado para observar via osciloscópio o extao momento em que cada conversão ADC é iniciada. (Na verdade o toggle on match ocorre um ciclo de coclock antes do início da conversão ADC).
 
 No código que eu criei, há um buffer com 10 posições de memória, o que nos possibilita armazenar o resultado de 10 conversões ADC. Assim, a cada 10 conversões ADC o buffer é totalmente preenchido. Para observar isso concetei um LED à porta PB7. Esse LED tem seu estado invertido toda vez que o buffer é preenchido. 
 
