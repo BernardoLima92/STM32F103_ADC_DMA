@@ -18,7 +18,8 @@ No código que eu criei, há um buffer com 10 posições de memória, o que nos 
 
 Usei um osciloscópio para analisar essas formas de onda.
 ![WhatsApp Image 2022-09-23 at 08 22 45](https://user-images.githubusercontent.com/114233216/191957668-b03443ad-00c9-4997-8321-65dcb7733db5.jpeg)
+
 A forma de onda azul (tanto a borda superior como a borda inferior) indica o início de cada conversão ADC. 
+
 A forma de onda amarela (tanto a borda superior como a borda inferior) indica que o buffer foi totalmente preenchido, ou seja, ele tem o resultado de 10 conversões analógicas.
 
-Os códigos estão mostrados na 
