@@ -23,3 +23,9 @@ A forma de onda azul (tanto a borda superior como a borda inferior) indica o in�
 
 A forma de onda amarela (tanto a borda superior como a borda inferior) indica que o buffer foi totalmente preenchido, ou seja, ele tem o resultado de 10 conversões analógicas.
 
+
+Para determinar a inversão do estado do LED em PB7 foi usada uma função para indicar o fim das conversões ADC:
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc1){
+HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+}
